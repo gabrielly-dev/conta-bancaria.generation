@@ -67,28 +67,25 @@ public abstract class Conta {
 		this.saldo = saldo;
 	}
 	
-	//METODOS
+	
+	//METODO SACAR
 	public boolean sacar(float valor) {
-		
 		if(this.getSaldo() < valor) {
 			System.out.println("\nSaldo Insuficiente!");
 			return false;
 		}
-		
 		this.setSaldo(this.getSaldo() - valor);
 		return true;
 	}
 	
+	//METODO DEPOSITAR
 	public void depositar(float valor) {
-		
 		this.setSaldo(this.getSaldo() + valor);
-		
 	}
 	
+	//METODO VISUALIZAR
 	public void visualizar() {
-		
 		String tipo = "";
-		
 		switch(this.tipo) {
 		case 1:
 			tipo = "Conta Corrente";
